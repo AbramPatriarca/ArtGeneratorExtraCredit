@@ -1,10 +1,17 @@
 import javax.swing.*;
 import java.awt.*;
+import java.nio.file.attribute.GroupPrincipal;
 
 public class Main extends JFrame{
     
     public static final int WIDTH = 1920;
     public static final int HEIGHT = 1080;
+
+
+    // public Main() {
+    //     mandelbrot = new JPanel();
+    //     mandelbrot.setLayout(null);
+    // }
 
     public static void main(String[] args) throws Exception {
         Main theGUI = new Main();
@@ -13,6 +20,8 @@ public class Main extends JFrame{
         synchronized(theGUI) {
             theGUI.wait();
         }
+
+        theGUI.startAnimation();
 
     }
 
@@ -24,6 +33,13 @@ public class Main extends JFrame{
         this.setLayout(new BorderLayout());
         this.setVisible(true);
 
+        Mandelbrot mandel = new Mandelbrot();
+        this.add(mandel);
+
+    }
+
+    public void startAnimation() {
+      
     }
 
 }
