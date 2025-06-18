@@ -1,11 +1,12 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class Main extends JFrame{
     
     public static final int WIDTH = 1920;
     public static final int HEIGHT = 1080;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Main theGUI = new Main();
         SwingUtilities.invokeLater( () -> theGUI.createFrame(theGUI) );
 
